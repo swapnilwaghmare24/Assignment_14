@@ -62,21 +62,27 @@ public class MyLinkedList<K>{
         tempNode.setNext(null);
     }
 
-    public void deleteLast() {
+    public Node<K> deleteLast() {
+        Node<K> deletedNode=null;
         if(head==tail)
         {
             head=null;
             tail=null;
         }
         else {
+
             Node<K> tempNode=head;
             while(tempNode.getNext().getNext()!=null)
             {
                 tempNode=tempNode.getNext();
             }
+            deletedNode=tempNode.getNext();
             tail=tempNode;
+
             tempNode.setNext(null);
+
         }
+        return deletedNode;
     }
 
     public boolean search(Node<K> node) {
@@ -100,6 +106,47 @@ public class MyLinkedList<K>{
         {
             count++;
             tempNode=tempNode.getNext();
+        }
+        return count;
+    }
+
+    public void remove(Node<K> node) {
+
+        Node<K> tempNode=head;
+        if(tempNode.getKey().equals(node.getKey()))
+        {
+            deleteFirst();
+        }
+        else {
+            while(tempNode!=null)
+            {
+                if(tempNode.getNext()!=null && tempNode.getNext().getKey().equals(node.getKey()))
+                {
+                    Node<K> deletedNode=tempNode.getNext();
+                    tempNode.setNext(tempNode.getNext().getNext());
+                    deletedNode.setNext(null);
+                }
+                tempNode=tempNode.getNext();
+            }
+        }
+
+    }
+
+    public boolean isEmpty() {
+        if(head==null)
+            return true;
+        return false;
+    }
+
+    public int index(Node<K> node) {
+        Node<K> tempNode=head;
+        int count=0;
+        while (tempNode!=null)
+        {
+            if(tempNode.getKey().equals(node.getKey()))
+                count++;
+            tempNode=tempNode.getNext();
+
         }
         return count;
     }
