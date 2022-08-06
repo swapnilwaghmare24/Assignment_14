@@ -24,23 +24,26 @@ public class LinkedListRunner {
          */
         Node<Integer> node1= new Node<>(56);
         myLinkedList.addLast(node1);
+        Node<Integer> node2= new Node<>(30);
+        myLinkedList.addLast(node2);
         Node<Integer> node3= new Node<>(70);
         myLinkedList.addLast(node3);
-        Node<Integer> node2= new Node<>(30);
-        myLinkedList.addAtPosition(1,node2);
         myLinkedList.printData();
         System.out.println();
        // myLinkedList.deleteFirst();
        // myLinkedList.deleteLast();
         //myLinkedList.printData();
-        if(myLinkedList.search(node3)==true)
+       /* if(myLinkedList.search(node3)==true)
         {
             System.out.println("node present in list");
         }
         else
         {
             System.out.println("node is not present in list");
-        }
+        }*/
+        Node<Integer> node4= new Node<>(40);
+        myLinkedList.addAtPosition(2,node4);
+        myLinkedList.printData();
 
 
     }
