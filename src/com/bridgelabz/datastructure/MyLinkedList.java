@@ -93,4 +93,14 @@ public class MyLinkedList<K>{
     }
 
 
+    public int size() {
+        Node<K> tempNode= head;
+        int count=0;
+        while (tempNode!=null)
+        {
+            count++;
+            tempNode=tempNode.getNext();
+        }
+        return count;
+    }
 }

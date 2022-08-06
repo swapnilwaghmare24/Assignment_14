@@ -44,6 +44,8 @@ public class LinkedListRunner {
         Node<Integer> node4= new Node<>(40);
         myLinkedList.addAtPosition(2,node4);
         myLinkedList.printData();
+        System.out.println();
+        System.out.println("Size of Linked List is - "+myLinkedList.size());
 
 
     }
