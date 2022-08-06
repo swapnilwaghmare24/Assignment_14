@@ -31,8 +31,16 @@ public class LinkedListRunner {
         myLinkedList.printData();
         System.out.println();
        // myLinkedList.deleteFirst();
-        myLinkedList.deleteLast();
-        myLinkedList.printData();
+       // myLinkedList.deleteLast();
+        //myLinkedList.printData();
+        if(myLinkedList.search(node3)==true)
+        {
+            System.out.println("node present in list");
+        }
+        else
+        {
+            System.out.println("node is not present in list");
+        }
 
 
     }
