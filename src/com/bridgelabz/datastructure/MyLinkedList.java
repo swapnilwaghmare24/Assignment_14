@@ -61,4 +61,21 @@ public class MyLinkedList<K>{
         head=tempNode.getNext();
         tempNode.setNext(null);
     }
+
+    public void deleteLast() {
+        if(head==tail)
+        {
+            head=null;
+            tail=null;
+        }
+        else {
+            Node<K> tempNode=head;
+            while(tempNode.getNext().getNext()!=null)
+            {
+                tempNode=tempNode.getNext();
+            }
+            tail=tempNode;
+            tempNode.setNext(null);
+        }
+    }
 }

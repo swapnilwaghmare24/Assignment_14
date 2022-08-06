@@ -30,7 +30,8 @@ public class LinkedListRunner {
         myLinkedList.addAtPosition(1,node2);
         myLinkedList.printData();
         System.out.println();
-        myLinkedList.deleteFirst();
+       // myLinkedList.deleteFirst();
+        myLinkedList.deleteLast();
         myLinkedList.printData();
 
 
