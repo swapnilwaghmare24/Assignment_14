@@ -29,7 +29,7 @@ public class LinkedListRunner {
         Node<Integer> node3= new Node<>(70);
         myLinkedList.addLast(node3);
         myLinkedList.printData();
-        System.out.println();
+        //System.out.println();
        // myLinkedList.deleteFirst();
        // myLinkedList.deleteLast();
         //myLinkedList.printData();
