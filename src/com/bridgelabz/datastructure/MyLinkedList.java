@@ -25,4 +25,17 @@ public class MyLinkedList<K>{
             tempNode=tempNode.getNext();
         }
     }
+
+    public void addFirst(Node<K> node)
+    {
+        if(head==null)
+        {
+            head=node;
+        }
+        else
+        {
+            node.setNext(head);
+            head=node;
+        }
+    }
 }
