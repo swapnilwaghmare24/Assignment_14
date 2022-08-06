@@ -55,4 +55,10 @@ public class MyLinkedList<K>{
             System.out.println("you can not insert node at this position");
         }
     }
+
+    public void deleteFirst() {
+        Node<K> tempNode=head;
+        head=tempNode.getNext();
+        tempNode.setNext(null);
+    }
 }

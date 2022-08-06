@@ -29,6 +29,9 @@ public class LinkedListRunner {
         Node<Integer> node2= new Node<>(30);
         myLinkedList.addAtPosition(1,node2);
         myLinkedList.printData();
+        System.out.println();
+        myLinkedList.deleteFirst();
+        myLinkedList.printData();
 
 
     }
