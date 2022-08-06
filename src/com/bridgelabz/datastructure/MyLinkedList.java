@@ -38,4 +38,21 @@ public class MyLinkedList<K>{
             head=node;
         }
     }
+
+
+    public void addAtPosition(int index, Node<K> node) {
+        Node<K> tempNode=head;
+        for(int i=0;i<index-1;i++)
+        {
+            tempNode=tempNode.getNext();
+        }
+        if(tempNode!=null)
+        {
+            node.setNext(tempNode.getNext());
+            tempNode.setNext(node);
+        }
+        else {
+            System.out.println("you can not insert node at this position");
+        }
+    }
 }
