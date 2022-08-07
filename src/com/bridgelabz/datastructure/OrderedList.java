@@ -56,4 +56,14 @@ public class OrderedList<K> {
     public void peek() {
         System.out.println("top of stack is "+linkedList.peek());
     }
+
+
+    public void append(K item) {
+        Node<K> node = new Node<>(item);
+        linkedList.addLast(node);
+    }
+
+    public void delete() {
+        linkedList.deleteFirst();
+    }
 }
