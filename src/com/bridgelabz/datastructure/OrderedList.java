@@ -14,7 +14,7 @@ public class OrderedList<K> {
     public void add(K item)
     {
         Node<K> node=new Node<K>(item);
-        linkedList.addLast(node);
+        linkedList.addFirst(node);
 
     }
 
@@ -51,5 +51,9 @@ public class OrderedList<K> {
 
     public void pop() {
         System.out.println("popped out node is "+linkedList.deleteLast());
+    }
+
+    public void peek() {
+        System.out.println("top of stack is "+linkedList.peek());
     }
 }

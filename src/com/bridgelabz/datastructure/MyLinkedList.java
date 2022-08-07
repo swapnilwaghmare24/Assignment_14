@@ -150,4 +150,14 @@ public class MyLinkedList<K>{
         }
         return count;
     }
+
+    public Node<K> peek()
+    {
+        Node<K> tempNode=head;
+        while(tempNode.getNext()!=null)
+        {
+            tempNode=tempNode.getNext();
+        }
+        return tempNode;
+    }
 }
